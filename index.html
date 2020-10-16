@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/assets/css/pokedex-list.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
+    <script src="https://kit.fontawesome.com/7443d15568.js" crossorigin="anonymous"></script>
+    <title>Developers Nostalgia</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+<body>
+   
+       <div class="pdex-list-main-cont flex-center flex-column">
+           <header class="pdl-header flex-center">
+               <div class="logo">DL</div>
+               <h2 class="pdl-header-headline">Online Pokedex</h2>
+               <div class="pdl-header-search-cont">
+                   <i class="fas fa-search"></i>
+                   <input type="text" id="search" aria-label="search">
+               </div>
+           </header>
+           <div class="pdl-popup-cont hidden">
+               <div class="pdl-popup-bg flex-center">
+                   <div class="pdex-card-types-cont popup-type-cont flex-center">
+                       <span class="pdex-card-type flex-center fire">Fire</span>
+                       <span class="pdex-card-type flex-center flying">Flying</span>
+                   </div>
+               </div>
+               <div class="pdl-popup-content-cont flex-center flex-column">
+                   <div class="pdl-popup-content flex-center flex-column">
+                       <div class="pdl-popup-img"></div>
+                       <div class="pdl-popup-pkmn-name">Lizardon</div>
+                       <ul class="pdl-popup-tabs flex-center">
+                           <li class="popup-tab">Poke Data</li>
+                           <li class="popup-tab">Poke Stats</li>
+                           <li class="popup-tab">Evolutions</li>
+                           <li class="popup-tab">Weaknesses</li>
+                       </ul>
+
+                       <!--                       Poke About Data Popup Container -->
+                       <div class="popup-content-tab-cont poke-data flex-center">
+                           <div class="general-data-cont">
+                               <div class="general-data-row"><span class="poke-data-attr">Species</span><span class="poke-data-attr-val">Seed</span></div>
+                               <div class="general-data-row"><span class="poke-data-attr">Height</span><span class="poke-data-attr-val">6'6.5" (1.90m)</span></div>
+                               <div class="general-data-row"><span class="poke-data-attr">Weight</span><span class="poke-data-attr-val">153.5lbs (54.7kg)</span></div>
+                               <div class="general-data-row"><span class="poke-data-attr">Abilities</span><span class="poke-data-attr-val">Overgrow, Chlorophyl</span></div>
+                           </div>
+                           <div class="breed-data-cont">
+                               <div class="breed-data-headline">Breeding</div>
+                               <div class="general-data-row"><span class="poke-data-attr">Gender</span>
+                                   <div class="gender-data-div poke-data-attr-val">
+                                       <span class="poke-data-attr-val gender-gap"><i class="fas fa-mars"></i>87.5%</span>
+                                       <span class="poke-data-attr-val"><i class="fas fa-venus"></i>12.6%</span>
+                                   </div>
+                               </div>
+                               <div class="general-data-row"><span class="poke-data-attr">Egg Groups</span><span class="poke-data-attr-val">Monster</span></div>
+                               <div class="general-data-row"><span class="poke-data-attr">Egg Cycle</span><span class="poke-data-attr-val">Fire</span></div>
+                           </div>
+                       </div>
+                       <!--                       Poke Stats Popup Container -->
+                       <div class="popup-content-tab-cont poke-data flex-center hidden">
+                           <div class="poke-stats-cont flex-column">
+                               <div class="poke-stat flex-center">
+                                   <div class="poke-stat-attr">HP</div>
+                                   <div class="poke-stat-num">150</div>
+                                   <div class="poke-stat-progr-bar hp-stat">
+                                       <div class="stat-progr-bar-filling hp-stat-filling"></div>
+                                   </div>
+                               </div>
+                               <div class="poke-stat flex-center">
+                                   <div class="poke-stat-attr">Attack</div>
+                                   <div class="poke-stat-num">184</div>
+                                   <div class="poke-stat-progr-bar att-stat">
+                                       <div class="stat-progr-bar-filling att-stat-filling"></div>
+                                   </div>
+                               </div>
+                               <div class="poke-stat flex-center">
+                                   <div class="poke-stat-attr">Defense</div>
+                                   <div class="poke-stat-num">142</div>
+                                   <div class="poke-stat-progr-bar def-stat">
+                                       <div class="stat-progr-bar-filling def-stat-filling"></div>
+                                   </div>
+                               </div>
+                               <div class="poke-stat flex-center">
+                                   <div class="poke-stat-attr">Sp. Att</div>
+                                   <div class="poke-stat-num">170</div>
+                                   <div class="poke-stat-progr-bar sp-att-stat">
+                                       <div class="stat-progr-bar-filling sp-att-stat-filling"></div>
+                                   </div>
+                               </div>
+                               <div class="poke-stat flex-center">
+                                   <div class="poke-stat-attr">Sp. Def</div>
+                                   <div class="poke-stat-num">123</div>
+                                   <div class="poke-stat-progr-bar sp-def-stat">
+                                       <div class="stat-progr-bar-filling sp-def-stat-filling"></div>
+                                   </div>
+                               </div>
+                               <div class="poke-stat flex-center">
+                                   <div class="poke-stat-attr">Speed</div>
+                                   <div class="poke-stat-num">109</div>
+                                   <div class="poke-stat-progr-bar speed-stat">
+                                       <div class="stat-progr-bar-filling speed-stat-filling"></div>
+                                   </div>
+                               </div>
+                               <div class="poke-stat flex-center">
+                                   <div class="poke-stat-attr">Total</div>
+                                   <div class="poke-stat-num">394</div>
+                                   <div class="poke-stat-progr-bar total-stat">
+                                       <div class="stat-progr-bar-filling total-stat-filling"></div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="popup-content-tab-cont poke-data flex-center hidde">
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="poke-type-btn-cont"></div>
+           <div class="pdl-cont"></div>
+       </div>
+       </body>
+       <script src="/assets/js/pokedex-list.js"></script>
+     </html>
